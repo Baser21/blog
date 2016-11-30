@@ -1,0 +1,1 @@
+solo pega la carpeta dist del .rar
