@@ -11,6 +11,7 @@ use App\Http\Requests\ArticleRequest as ArticleRequest;
 
 class ArticlesController extends Controller
 {
+    //Esto es un cambio
     /**
      * Create a new controller instance.
      *
