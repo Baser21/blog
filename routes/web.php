@@ -27,7 +27,17 @@ Route::get('/', [
     'uses' => 'FrontController@index',
     'as' => 'front.index'
 ]);
- 
+
+Route::get('/categories/{name}',[
+    'uses' => 'FrontController@searchCategory',
+    'as' => 'front.search.category'
+]);
+
+Route::get('/tags/{name}',[
+    'uses' => 'FrontController@searchTag',
+    'as' => 'front.search.tag'
+]);
+
 Route::group(['prefix' => 'admin'], function(){
 
     Route::get('/', [

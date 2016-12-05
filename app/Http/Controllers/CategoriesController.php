@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Laracasts\Flash\FlashServiceProvider;
 use App\Category as Category;
 use App\Http\Requests\CategoryRequest as CategoryRequest;
+
 //comando: php artisan make::controller CategoriesController -r (o --resource)
 class CategoriesController extends Controller
 {
