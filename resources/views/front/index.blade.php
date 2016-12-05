@@ -13,15 +13,17 @@
                                 <a href="#" class="thumbnail">
                                     @foreach($images as $image)
                                         @if($image->article_id == $article->id)
+
                                             <img class="img-responsive img-article"
-                                                 src="../public/images/articles/{{$image->name}}"
+                                                 src="../images/articles/{{$image->name}}"
                                                  alt="...">
+
                                         @endif
                                     @endforeach
                                 </a>
                                 <h3 class="text-center">{{$article->title}}</h3>
                                 <hr>
-                                <i class="fa fa-folder-open-o"></i> <a href="">{{$article->category->name}}</a>
+                                <i class="fa fa-folder-open-o"></i> <a href="{{route('front.search.category', $article->category->name)}}">{{$article->category->name}}</a>
                                 <div class="pull-right">
                                     <i class="fa fa-clock-o"></i> {{$article->created_at->diffForHumans()}}
                                 </div>

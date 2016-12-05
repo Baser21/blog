@@ -19,4 +19,9 @@ class Tag extends Model
     public function scopeSearch($query, $name){
     	return $query->where('name', 'like', "%$name%");
     }
+
+    //scope para buscar
+    public function scopeSearchTag($query, $name){
+        return $query->where('name','=', $name);
+    }
 }
