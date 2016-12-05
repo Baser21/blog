@@ -31,19 +31,22 @@ class Article extends Model
 
     protected $fillable = ['title', 'content', 'user_id', 'category_id'];
 
-    //un articulo solo pertenece a una categoria, por eso el nombre de la funcion category en singular
+    //1 articulo -> 1 categoria | 1 categoria -> varios articulos
     public function category(){
-    	return $this->belongsTo('\App\category');
+    	return $this->belongsTo('\App\Category');
     }
 
+    //1 articulo -> 1 usuario | 1 usuario -> varios articulos
     public function user(){
-    	return $this->belongsTo('\App\User');
+        return $this->belongsTo('\App\User');
     }
 
+    //1 articulo -> varias imagenes | 1 imagen -> 1 articulo
     public function images(){
-    	return $this->hashMany('\App\image');
+    	return $this->belongsTo('\App\image');
     }
 
+    //1 articulo -> varios tags | 1 tag -> varios articulos
     public function tags(){
     	return $this->belongsToMany('\App\Tag')->withTimestamps();
     }

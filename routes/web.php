@@ -27,7 +27,7 @@ Route::get('/', [
     'uses' => 'FrontController@index',
     'as' => 'front.index'
 ]);
-
+ 
 Route::group(['prefix' => 'admin'], function(){
 
     Route::get('/', [
