@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Inicio</a>
+      <a class="navbar-brand" href="{{route('admin.index')}}">Inicio</a>
     </div>
     @if(Auth::user())
     <!-- Collect the nav links, forms, and other content for toggling -->

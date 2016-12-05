@@ -180,7 +180,12 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         /*
-        *   Mis Providers
+         * Providers de mi codigo
+         */
+        App\Providers\ComposerServiceProvider::class,
+
+        /*
+        *   Mis Providers incluidos de terceros
         */
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
