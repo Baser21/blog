@@ -23,9 +23,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/', [
+    'uses' => 'FrontController@index',
+    'as' => 'front.index'
+]);
 
 Route::group(['prefix' => 'admin'], function(){
+
+    Route::get('/', [
+       'as' => 'admin.index', function(){
+            return view('admin.index');
+        }
+    ]);
 
 	//Crea un estilo de api result que toma los metodos de un controlador y definislos como estilos de rutas
 	//param: nombre para este grupo de rutas, nombre del controlador que va a definir las rutas 
